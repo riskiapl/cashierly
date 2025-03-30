@@ -1,20 +1,25 @@
-# SolidStart
+# Cashierly
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+A modern web application built with SolidStart framework.
 
-## Creating a project
+## Requirements
+
+- Node.js v22.x or higher
+- npm v11.x or higher
+
+## Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-# create a new project in the current directory
-npm init solid@latest
-
-# create a new project in my-app
-npm init solid@latest my-app
+git clone https://github.com/riskiapl/cashierly.git
+cd cashierly
+npm install
 ```
 
-## Developing
+## Development
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start the development server:
 
 ```bash
 npm run dev
@@ -23,10 +28,55 @@ npm run dev
 npm run dev -- --open
 ```
 
+The application will be available at `http://localhost:3000`
+
 ## Building
 
-Solid apps are built with _presets_, which optimise your project for deployment to different environments.
+Build the application for production:
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
+```bash
+npm run build
+```
 
-## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
+This will generate optimized files ready for deployment.
+
+## Deployment
+
+After building, you can start the production server:
+
+```bash
+npm run start
+```
+
+### Deployment Options
+
+SolidStart supports various deployment environments:
+
+- **Node.js Server**: Default output (no additional configuration needed)
+- **Static Site**: Add `@solidjs/start-static` to your dependencies
+- **Vercel**: Add `@solidjs/start-vercel` to your dependencies
+- **Netlify**: Add `@solidjs/start-netlify` to your dependencies
+
+Configure your preferred deployment option in `app.config.js`.
+
+## Project Structure
+
+```
+cashierly/
+├── public/          # Static assets
+├── src/
+│   ├── components/  # Reusable UI components
+│   ├── routes/      # Application routes
+│   └── app.tsx      # App root component
+└── package.json     # Dependencies and scripts
+```
+
+## Technologies
+
+- [SolidJS](https://solidjs.com) - A declarative, efficient, and flexible JavaScript library for building user interfaces
+- [SolidStart](https://start.solidjs.com) - A framework for building SolidJS applications
+- [Vite](https://vitejs.dev) - Next Generation Frontend Tooling
+
+## License
+
+MIT
