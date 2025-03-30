@@ -13,10 +13,7 @@
     "types": ["vinxi/types/client"],
     "isolatedModules": true,
     "paths": {
-      "~/*": ["./src/*"],
-      "~/components/*": ["./src/components/*"],
-      "~/routes/*": ["./src/routes/*"],
-      "~/utils/*": ["./src/utils/*"]
+      "~/*": ["./src/*"]
     }
   }
 }
